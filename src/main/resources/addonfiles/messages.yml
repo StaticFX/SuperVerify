@@ -1,0 +1,63 @@
+discord:
+  noPermission: "You don't have permission for this command."
+mc:
+  noPermission: "&cYou don't have permission for this command."
+
+
+events:
+  #leave empty for none
+  join: "&cYou are not verified yet with the discord. Please join our discord under {url}"
+  hover: "&aClick here to join our discord."
+  joinDiscord: "Welcome on our network. Please consider verifying yourself with the minecraft server."
+
+command:
+  verify:
+    verifySyntax: "Use {prefix}discord <ingameName>"
+    invalidPlayer: "Player not found."
+    alreadyVerified: "This player is already linked to another discord account"
+    alreadySendInquiry: "You already send an inquiry to a player. Please wait before sendign another one."
+    playerHasInquiry: "This player already has an pending inquiry."
+    request: "&aA user from the discord send a verify inquiry to your account. Member: &c%member%"
+    accept: "&a&lACCEPT"
+    acceptHover: "&aClick to accept"
+    decline: "&c&lDECLINE"
+    declineHover: "&cClick to decline"
+    accDeclFiller: " &8| "
+    description: "Verifies your discord account."
+    nameDescription: "Your minecraft ingame name"
+    requestSent: "An inquiry was successfully send."
+    inquiryBlocked: "No response was found to your inquiry."
+    accepted: "Successfully verified"
+    declined: "The user on the server has declined your inquiry."
+    notVerified: "&cYou are not verified yet"
+    unlinked: "&aYou have unlinked yourself from your account."
+    updated: "&aYou're account hase been updated"
+  verifyMC:
+    usage: "&cUse /verify <accept/decline>"
+    noInquiryPending: "&cYou currently don't have any pending inquiries."
+    inquiryTimeOuted: "&cYour inquiry has timed out."
+    accepted: "&aYou are now verified. You're groups were synchronized."
+    declined: "&aYou have declined the inquiry."
+    #Will throw when member could not been found on discord
+    errorOccurred: "&4While syncing your groups an error appeared. Please inform an admin."
+  group:
+    usage: "&cUse /group <list/generate/reload>"
+    groupsGenerated: "&aThe groups have been generated"
+    groupsReloaded: "&aThe groups.yml file has been reloaded"
+    groupsEmpty: "There are no groups yet."
+  sv:
+    usage: "&cUse /sv <unlink/update/reload>"
+    unlinkUsage: "&cUse sv <unlink> <uuid>"
+    notVerified: "&cThe player is not verified yet."
+    unlinked: "&aThe player was unlinked."
+    updateUsage: "&cUse sv <update> <uuid>"
+    updated: "&aThe user was updated"
+    reloaded: "&aAll files have been reloaded."
+  unlink:
+    notVerifiedYet: "Your account is not verified yet"
+    playerNotOnline: "Your ingameplayer is not on the network currently."
+    unlinked: "You are now unlinked from your ingame account."
+  update:
+    notVerifiedYet: "Your account is not verified yet"
+    playerNotOnline: "Your ingameplayer is not on the network currently."
+    updated: "You are now unlinked from your ingame account."

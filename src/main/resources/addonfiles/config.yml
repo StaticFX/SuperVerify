@@ -1,0 +1,42 @@
+#command required to access all verify function
+verifyCommand: "discord"
+
+#if the plugin should sync usernames to the other platform
+syncUserNames: true
+
+#This will set if the plugin will shift roles from dc -> mc or in the otherway around
+#true: dc -> mc
+#false: mc -> dc
+prioritizeDiscordRoles: false
+
+#the url to your discord. Will be send on player join
+discordURL: "discord.gg/yourDiscord"
+
+#If the plugin should update users everytime the join on the mc server
+#True: Roles or mc groups will update everytime they join
+#False: it will not
+updateUsersOnJoin: true
+
+#this part is important for setting and removing mc groups
+#these command will be executed in the console, and will give or remove mc players their ranks
+#this is important if you want to sync from dc to mc.
+#you can use placeholders
+# %name% - the ingame username
+# %role% - the role they will get or get removed
+setCommand: ""
+removeCommand: ""
+
+#How long a user has time to accept/decline his inquiry
+#should not be longer than 3 minutes, could cause errors
+#-1 for none
+#@Unit: seconds
+verifyTime: 20
+
+#if the plugin should ignore if the player was rewarded once.
+ignoreRewardState: false
+
+#role to give as soon as a discord account gets verified
+verifyRole: ""
+
+#Role to assign as a new member joins the discord
+assignAsJoin: ""

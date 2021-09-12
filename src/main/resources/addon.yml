@@ -1,0 +1,4 @@
+name: SuperVerify
+main: de.staticred.addon.VerifyAddon
+version: 1.0.0
+author: StaticRed
