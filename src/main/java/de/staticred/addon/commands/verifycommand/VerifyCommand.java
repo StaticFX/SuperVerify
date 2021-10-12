@@ -25,7 +25,7 @@ import java.sql.SQLException;
 public class VerifyCommand implements DiscordCommand {
 
     public static final String NAME = "verify";
-    public static final String PREFIX = DBUtil.getINSTANCE().getConfigFileManager().getPrefix();
+    public static final String PREFIX = "!";
     public static final String PERMISSION = "dv.cmd.verify";
 
     public String getName() {

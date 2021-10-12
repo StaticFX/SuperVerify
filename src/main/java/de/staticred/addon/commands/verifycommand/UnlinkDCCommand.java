@@ -28,7 +28,7 @@ public class UnlinkDCCommand implements DiscordCommand {
 
     @Override
     public String getPrefix() {
-        return DBUtil.getINSTANCE().getConfigFileManager().getPrefix();
+        return "!";
     }
 
     @Override
