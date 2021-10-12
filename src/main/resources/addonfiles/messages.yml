@@ -12,7 +12,7 @@ events:
 
 command:
   verify:
-    verifySyntax: "Use {prefix}discord <ingameName>"
+    verifySyntax: "Use {prefix}verify <ingameName>"
     invalidPlayer: "Player not found."
     alreadyVerified: "This player is already linked to another discord account"
     alreadySendInquiry: "You already send an inquiry to a player. Please wait before sendign another one."
