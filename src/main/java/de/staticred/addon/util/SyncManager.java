@@ -213,7 +213,7 @@ public class SyncManager {
             logger.postDebug("False");
 
             logger.postDebug("Checking if role is the highest the user has or if he has higher group:");
-            if (!checkIfRoleIsHighest(member.getRoles(), BotHelper.getRole(group.getDiscordID()))) {
+            if (!checkIfRoleIsHighest(getRegisterRoles(), BotHelper.getRole(group.getDiscordID()))) {
                 rolesToRemove.add(group);
                 logger.postDebug("False, group will be removed.");
             }
@@ -286,7 +286,7 @@ public class SyncManager {
     }
 
     private static boolean checkIfRoleIsHighest(List<Role> roles, Role role) {
-        return roles.stream().noneMatch(role1 -> role1.getPosition() > role.getPosition());
+        return roles.stream().noneMatch(role1 -> role1.getPosition() >= role.getPosition());
     }
 
     private static boolean hasNonDynamicRole(Member member) {
@@ -363,6 +363,15 @@ public class SyncManager {
 
     private static Group getGroupForRole(List<Group> groups, String id) {
         return groups.stream().filter(group -> group.getDiscordID().equals(id)).findFirst().orElse(null);
+    }
+
+
+    private static List<Role> getRegisterRoles() {
+        List<Role> roles = new ArrayList<>();
+        for(Group group : VerifyAddon.getInstance().getGroupsFile().getAllGroups()) {
+            roles.add(BotHelper.getRole(group.getDiscordID()));
+        }
+        return roles;
     }
 
 
