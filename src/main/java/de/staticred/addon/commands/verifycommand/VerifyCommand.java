@@ -47,7 +47,7 @@ public class VerifyCommand implements DiscordCommand {
         }
 
         if (args.length != 1) {
-            discordSender.sendMessage(VerifyAddon.getInstance().getMessageManager().getVerifyUsage());
+            discordSender.sendMessage(VerifyAddon.getInstance().getMessageManager().getVerifyUsage().replace("{prefix}", DBUtil.getINSTANCE().getConfigFileManager().getPrefix()));
             return;
         }
 
