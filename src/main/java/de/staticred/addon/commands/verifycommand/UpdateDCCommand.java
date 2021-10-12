@@ -25,7 +25,7 @@ public class UpdateDCCommand implements DiscordCommand {
 
     @Override
     public String getPrefix() {
-        return "!";
+        return DBUtil.getINSTANCE().getConfigFileManager().getPrefix();
     }
 
     @Override
